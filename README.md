@@ -11,4 +11,4 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation, S
 ### 기술 스택
 Java, Spring, H2 Database
 ### ERD
-![Uploading 스크린샷 2024-05-19 오후 5.22.54.png…]()
+<img width="680" alt="스크린샷 2024-05-19 오후 5 22 54" src="https://github.com/mtgv999/Ecommerce/assets/149506393/bdfc403b-a081-4c52-a43e-ca00680a2323">
