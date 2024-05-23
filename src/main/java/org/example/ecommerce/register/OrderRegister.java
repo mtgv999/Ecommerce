@@ -1,4 +1,4 @@
-package org.example.ecommerce.register;
-
-public class OrderRegister {
-}
+//package org.example.ecommerce.register;
+//
+//public class OrderRegister {
+//}

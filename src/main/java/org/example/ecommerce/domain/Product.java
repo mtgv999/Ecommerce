@@ -1,2 +1,2 @@
-package org.example.ecommerce.domain;
-public class Product { }
+//package org.example.ecommerce.domain;
+//public class Product { }

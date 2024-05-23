@@ -1,4 +1,2 @@
-package org.example.ecommerce.service;
-
-public class ProductService {
-}
+//package org.example.ecommerce.service;
+//public class ProductService { }

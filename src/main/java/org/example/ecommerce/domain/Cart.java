@@ -1,2 +1,2 @@
-package org.example.ecommerce.domain;
-public class Cart { }
+//package org.example.ecommerce.domain;
+//public class Cart { }

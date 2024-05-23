@@ -1,4 +1,4 @@
-package org.example.ecommerce.repository;
-import org.springframework.stereotype.Repository;
-@Repository
-public interface CartRepository { }
+//package org.example.ecommerce.repository;
+//import org.springframework.stereotype.Repository;
+//@Repository
+//public interface CartRepository { }
