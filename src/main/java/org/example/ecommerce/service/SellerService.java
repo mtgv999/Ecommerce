@@ -1,5 +1,4 @@
 package org.example.ecommerce.service;
-
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.ecommerce.domain.Seller;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/seller")
 @RequiredArgsConstructor
-public class SellerController {
+public class SellerController {//판매자
     private final SellerService sellerService;
 
     @PostMapping("/make")//판매자 계정 만듬

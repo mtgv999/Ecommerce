@@ -1,2 +1,2 @@
-//package org.example.ecommerce.domain;
-//public class Order { }
+package org.example.ecommerce.domain;
+public class Order { }
