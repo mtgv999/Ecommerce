@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class SellerService {//판매자
     private final SellerRepository sellerRepository;
+
     public Seller makeSeller(SellerRegister sRegister) {
         return sellerRepository.save(SellerRegister.sForm(sRegister));}
 
