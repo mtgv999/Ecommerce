@@ -24,4 +24,5 @@ public class CartRegister {//장바구니 등록
                 .cID(cartRegister.getCID())
                 .cartPNumber(cartRegister.getCartPNumber())
                 .totalCost(cartRegister.getTotalCost())
+                .cartNumber(cartRegister.getCartNumber())
                 .build();return cart;}}

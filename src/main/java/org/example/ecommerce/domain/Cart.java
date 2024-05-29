@@ -16,6 +16,7 @@ public class Cart extends BaseEntity{@Id//장바구니
     private String cartName;//장바구니 이름
     private String pName;//물건 이름
     private Long sID;//판매자 아이디
+
     private Long cID;//고객 아이디
     private Long cartPNumber;//장바구니 내 상품들의 총 개수
     private Long totalCost;//가격 총합

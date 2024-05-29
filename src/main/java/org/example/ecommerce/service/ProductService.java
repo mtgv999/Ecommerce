@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 public class ProductService {//상품
     private final ProductRepository productRepository;
     public Product makeProduct(ProductRegister pRegister) {
-    return productRepository.save(ProductRegister.pForm(pRegister));}
+return productRepository.save(ProductRegister.pForm(pRegister));}
 
     public Product getProduct(Long pID) {
         return productRepository.findBypID(pID);}

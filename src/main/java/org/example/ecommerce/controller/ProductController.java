@@ -12,7 +12,7 @@ public class ProductController {//상품
     private final ProductService productService;
 
     @PostMapping("/make")//상품 계정 만듬
-    public Product makeProduct(@RequestBody ProductRegister pRegister){
+public Product makeProduct(@RequestBody ProductRegister pRegister){
         return productService.makeProduct(pRegister);}
 
     @GetMapping("/get/{pID}")//상품 정보 가져옴.
