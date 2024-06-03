@@ -3,6 +3,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.ecommerce.domain.Order;
 import org.example.ecommerce.register.OrderRegister;
 import org.example.ecommerce.service.OrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrderController{//주문
     private final OrderService orderService;
+    @PostMapping ("/make0")public Order makeOrder0
+     (@RequestParam Long pID, @RequestParam int orderPCount){
+        return orderService.makeOrder0(pID,orderPCount);}
 
     @PostMapping("/make")//주문 만듬
 public Order makeOrder(@RequestBody OrderRegister oRegister){

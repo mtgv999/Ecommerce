@@ -24,6 +24,6 @@ public class CartController{//장바구니
     @RequestBody CartRegister cartRegister){
         return cartService.updateCart(cartID,cartRegister);}
 
-    @DeleteMapping("/delete/{cartID")//장바구니 계정 삭제
+    @DeleteMapping("/delete/{cartID}")//장바구니 계정 삭제
     public void deleteCart(@PathVariable Long cartID){
         cartService.deleteCart(cartID);}}

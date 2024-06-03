@@ -12,11 +12,12 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class Customer extends BaseEntity {@Id//고객
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long cID;
-    private Long cPW;
-    private String cName;//고객 번호
+    private Long cID;//고객 아이디
+    private Long cPW;//고객 비밀 번호
+    private String cName;//고객 이름
     private Long cAccountNumber;//고객 계좌 번호
     private Long cPhoneNumber;//고객 핸드폰 번호
+
     public void cUpdate(CustomerRegister cRegister){
         this.cName=cRegister.getCName();
         this.cAccountNumber=cRegister.getCAccountNumber();

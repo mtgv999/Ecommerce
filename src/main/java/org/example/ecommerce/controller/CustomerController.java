@@ -13,7 +13,7 @@ public class CustomerController {//고객
     private final CustomerService customerService;
 
     @PostMapping("/make")//고객 계정 만듬
-    public Customer makeCustomer(@RequestBody CustomerRegister cRegister){
+public Customer makeCustomer(@RequestBody CustomerRegister cRegister){
         return customerService.makeCustomer(cRegister);}
 
     @GetMapping("/get/{cID}")//고객 정보 가져옴.
