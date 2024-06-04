@@ -12,20 +12,20 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners(AuditingEntityListener.class)
 public class Product extends BaseEntity{@Id//상품
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long pID;//상품 아이디
-    private Long sID;//판매자 아이디
-    private String pName;//상품 이름
+    private Long productID;//상품 아이디
+    private Long sellerID;//판매자 아이디
+    private String productName;//상품 이름
     private double cost;//상품 가격
     private String category;//분류
     private String information;//정보
-    private Long pNumber;//상품 번호
-    private int pCount;//상품 개수
+    private Long productNumber;//상품 번호
+    private int stock;//상품(재고) 개수
 
-    public void pUpdate(ProductRegister pRegister){
-        this.sID =pRegister.getSID();
-        this.pName =pRegister.getPName();
-        this.cost=pRegister.getCost();
-        this.category=pRegister.getCategory();
-        this.information=pRegister.getInformation();
-        this.pNumber=pRegister.getPNumber();
-        this.pCount=pRegister.getPCount();}}
+    public void pUpdate(ProductRegister productRegister){
+        this.sellerID =productRegister.getSellerID();
+        this.productName =productRegister.getProductName();
+        this.cost=productRegister.getCost();
+        this.category=productRegister.getCategory();
+        this.information=productRegister.getInformation();
+        this.productNumber =productRegister.getProductNumber();
+        this.stock =productRegister.getStock();}}

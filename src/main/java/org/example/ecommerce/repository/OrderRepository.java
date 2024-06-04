@@ -4,5 +4,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface OrderRepository extends JpaRepository<Order,Long>{
-    Order findByoNumber(Long oNumber);//주문 번호로 찾기
-    void deleteByoNumber(Long oNumber);}//주문 삭제
+    Order findByorderNumber(Long orderNumber);//주문 번호로 찾기
+    void deleteByorderNumber(Long orderNumber);}//주문 삭제

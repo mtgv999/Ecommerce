@@ -7,14 +7,15 @@ import org.example.ecommerce.domain.Seller;
 @NoArgsConstructor
 @Builder
 public class SellerRegister {//판매자용 회원 등록
-    private Long sPW;//판매자 비밀 번호
-    private String sName;//판매자 이름
-    private Long sAccountNumber;//판매자 계좌 번호
-    private Long sPhoneNumber;//판매자 핸드폰 번호
+    private Long sellerPW;//판매자 비밀 번호
+    private String sellerName;//판매자 이름
+    private Long sellerAccountNumber;//판매자 계좌 번호
+    private Long sellerPhoneNumber;//판매자 핸드폰 번호
 
-    public static Seller sForm(SellerRegister sRegister){
+    public static Seller sellerForm(SellerRegister sellerRegister){
         Seller seller=Seller.builder()
-                .sPW(sRegister.getSPW()).sName(sRegister.getSName())
-                .sAccountNumber(sRegister.getSAccountNumber())
-                .sPhoneNumber(sRegister.getSPhoneNumber())
+                .sellerPW(sellerRegister.getSellerPW())
+                .sellerName(sellerRegister.getSellerName())
+                .sellerAccountNumber(sellerRegister.getSellerAccountNumber())
+                .sellerPhoneNumber(sellerRegister.getSellerPhoneNumber())
                 .build();return seller;}}

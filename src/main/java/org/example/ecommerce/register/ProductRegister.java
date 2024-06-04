@@ -7,21 +7,21 @@ import org.example.ecommerce.domain.Product;
 @NoArgsConstructor
 @Builder
 public class ProductRegister {//상품용 회원 등록
-    private Long sID;//판매자 아이디
-    private String pName;//상품 이름
+    private Long sellerID;//판매자 아이디
+    private String productName;//상품 이름
     private double cost;//가격
     private String category;//분류
     private String information;//정보
-    private Long pNumber;//상품 번호
-    private int pCount;//상품 개수
+    private Long productNumber;//상품 번호
+    private int stock;//상품 개수
 
-    public static Product pForm(ProductRegister pRegister){
+    public static Product productForm(ProductRegister productRegister){
         Product product= Product.builder()
-                .sID(pRegister.getSID())
-                .pName(pRegister.getPName())
-                .cost(pRegister.getCost())
-                .category(pRegister.getCategory())
-                .information(pRegister.getInformation())
-                .pNumber(pRegister.getPNumber())
-                .pCount(pRegister.getPCount())
+                .sellerID(productRegister.getSellerID())
+                .productName(productRegister.getProductName())
+                .cost(productRegister.getCost())
+                .category(productRegister.getCategory())
+                .information(productRegister.getInformation())
+                .productNumber(productRegister.getProductNumber())
+                .stock(productRegister.getStock())
                 .build();return product;}}

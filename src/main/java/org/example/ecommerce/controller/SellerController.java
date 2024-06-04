@@ -3,6 +3,7 @@ import lombok.RequiredArgsConstructor;
 import org.example.ecommerce.domain.Seller;
 import org.example.ecommerce.loginnrequest.SellerLoginRequest;
 import org.example.ecommerce.register.SellerRegister;
+import org.example.ecommerce.service.ProductService;
 import org.example.ecommerce.service.SellerService;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,25 +12,33 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class SellerController {//판매자
     private final SellerService sellerService;
+    private final ProductService productService;
 
     @PostMapping("/make")//판매자 계정 만듬
-    public Seller makeSeller(@RequestBody SellerRegister sRegister){
-        return sellerService.makeSeller(sRegister);}
+    public Seller makeSeller(@RequestBody SellerRegister sellerRegister){
+        return sellerService.makeSeller(sellerRegister);}
 
-    @GetMapping("/get/{sID}")//판매자 정보 가져옴.
-    public Seller getSeller(@PathVariable Long sID){
-        return sellerService.getSeller(sID);}
+    @GetMapping("/get/{sellerID}")//판매자 정보 가져옴.
+    public Seller getSeller(@PathVariable Long sellerID){
+        return sellerService.getSeller(sellerID);}
 
-    @PutMapping("/update/{sID}")//판매자 정보 수정
-    public Seller updateSeller(@PathVariable Long sID,
-    @RequestBody SellerRegister sRegister){
-        return sellerService.updateSeller(sID,sRegister);}
+    @PutMapping("/update/{sellerID}")//판매자 정보 수정
+    public Seller updateSeller(@PathVariable Long sellerID,
+    @RequestBody SellerRegister sellerRegister){
+return sellerService.updateSeller(sellerID,sellerRegister);}
 
-    @DeleteMapping("/delete/{sID}")//판매자 계정 삭제
-    public void deleteSeller(@PathVariable Long sID){
-        sellerService.deleteSeller(sID);}
+    @PutMapping("/update0/{sellerID}")//판매자 정보 수정
+    public Seller updateSeller0(@PathVariable Long sellerID,
+@RequestBody SellerLoginRequest sellerLoginRequest, @RequestBody SellerRegister sellerRegister){
+return sellerService.updateSeller0(sellerID,sellerLoginRequest,sellerRegister);}
 
-    @PostMapping("/sLogin")//고객이 회원 가입 했는지의 여부를
+    @DeleteMapping("/delete/{sellerID}")
+    //판매자 계정을 삭제 하려고 할 때, 판매자 ID, PW를 확인한 후에 삭제.
+    public void deleteSeller(@PathVariable Long sellerID,
+    @RequestBody SellerLoginRequest sellerLoginRequest){
+        sellerService.deleteSeller(sellerID,sellerLoginRequest);}
+
+    @PostMapping("/sellerLogin")//고객이 회원 가입 했는지의 여부를
     //로그인(고객 ID, PW 확인)을 통해 확인 하려는 요청.
-    public String sLogin(@RequestBody SellerLoginRequest sLReq){
-        return sellerService.sLogin(sLReq);}}
+    public String sellerLogin(@RequestBody SellerLoginRequest sellerLoginRequestRequest){
+        return sellerService.sellerLogin(sellerLoginRequestRequest);}}

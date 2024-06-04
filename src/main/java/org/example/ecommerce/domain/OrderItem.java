@@ -10,7 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 public class OrderItem {@Id//주문받는 상품
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long oItemId;
+    private Long orderItemId;
     @ManyToOne
     private Product product;
-    private int orderPCount;}
+    private int orderCount;}

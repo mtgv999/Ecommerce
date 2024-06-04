@@ -6,8 +6,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class CustomerLoginRequest {//고객 로그인 확인 요청
     @JsonProperty
-    private Long cID;
+    private Long customerID;
     @JsonProperty
-    private Long cPW;}
+    private Long customerPW;}
