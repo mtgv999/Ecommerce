@@ -1,4 +1,5 @@
 package org.example.ecommerce.controller;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.example.ecommerce.domain.Customer;
 import org.example.ecommerce.loginnrequest.CustomerLoginRequest;
@@ -12,8 +13,16 @@ import org.springframework.web.bind.annotation.*;
 public class CustomerController {//고객
     private final CustomerService customerService;
 
+    @PostMapping("/account")
+    public CreateAccount.Response createAccount(
+            @RequestBody @Valid CreateAccount.Request request) {
+        return CreateAccount.Response.from(
+                customerService.createAccount(
+                        request.getUserId(),
+                        request.getInitialBalance()));}
+
     @PostMapping("/make")//고객 계정 만듬
-public Customer makeCustomer(@RequestBody CustomerRegister cRegister){
+    public Customer makeCustomer(@RequestBody CustomerRegister cRegister){
         return customerService.makeCustomer(cRegister);}
 
     @GetMapping("/get/{cID}")//고객 정보 가져옴.

@@ -3,6 +3,9 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.example.ecommerce.register.CustomerRegister;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.time.LocalDateTime;
+
 @Builder
 @Entity
 @Getter
@@ -17,6 +20,10 @@ public class Customer extends BaseEntity {@Id//고객
     private String cName;//고객 이름
     private Long cAccountNumber;//고객 계좌 번호
     private Long cPhoneNumber;//고객 핸드폰 번호
+
+    private String accountNumber;
+    private Long balance;
+    private LocalDateTime registeredAt;
 
     public void cUpdate(CustomerRegister cRegister){
         this.cName=cRegister.getCName();
