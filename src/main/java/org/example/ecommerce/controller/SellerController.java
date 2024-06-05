@@ -1,7 +1,9 @@
 package org.example.ecommerce.controller;
 import lombok.RequiredArgsConstructor;
+import org.example.ecommerce.domain.Customer;
 import org.example.ecommerce.domain.Seller;
 import org.example.ecommerce.loginnrequest.SellerLoginRequest;
+import org.example.ecommerce.register.CustomerRegister;
 import org.example.ecommerce.register.SellerRegister;
 import org.example.ecommerce.service.ProductService;
 import org.example.ecommerce.service.SellerService;
@@ -41,4 +43,14 @@ return sellerService.updateSeller0(sellerID,sellerLoginRequest,sellerRegister);}
     @PostMapping("/sellerLogin")//고객이 회원 가입 했는지의 여부를
     //로그인(고객 ID, PW 확인)을 통해 확인 하려는 요청.
     public String sellerLogin(@RequestBody SellerLoginRequest sellerLoginRequestRequest){
-        return sellerService.sellerLogin(sellerLoginRequestRequest);}}
+        return sellerService.sellerLogin(sellerLoginRequestRequest);}
+
+    @PutMapping("/update/{sellerID}/used")
+    public Seller updateSellerUsed(@PathVariable Long sellerID,
+    @RequestBody SellerRegister customerRegister){
+        return sellerService.changeSellerUsed(sellerID,customerRegister);}
+
+    @PutMapping("/write/{sellerID}/review")
+    public Seller writeSellerReview(@PathVariable Long sellerID,
+    @RequestBody SellerRegister sellerRegister){
+        return sellerService.writeSellerReview(sellerID,sellerRegister);}}

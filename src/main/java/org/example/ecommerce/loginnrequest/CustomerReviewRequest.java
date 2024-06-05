@@ -6,10 +6,11 @@ import lombok.NoArgsConstructor;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class CustomerLoginRequest {//고객 로그인 확인 요청
+public class CustomerReviewRequest {//고객 리뷰 수정 요청
     @JsonProperty
     private Long customerID;
     @JsonProperty
     private Long customerPW;
+    @JsonProperty
+    private String isUsed;
 }

@@ -41,4 +41,14 @@ public Customer makeCustomer(@RequestBody CustomerRegister customerRegister){
     @PostMapping("/cLogin")//고객이 회원 가입을 했는지의 여부를
     //로그인(고객 ID, PW 확인)을 통해 확인 하려는 요청.
     public String customerLogin(@RequestBody CustomerLoginRequest customerLoginRequest){
-        return customerService.cLogin(customerLoginRequest);}}//[2][4]
+        return customerService.cLogin(customerLoginRequest);}
+
+    @PutMapping("/update/{customerID}/used")
+    public Customer updateCustomerUsed(@PathVariable Long customerID,
+    @RequestBody CustomerRegister customerRegister){
+        return customerService.changeCustomerUsed(customerID,customerRegister);}
+
+    @PutMapping("/write/{customerID}/review")
+    public Customer writeCustomerReview(@PathVariable Long customerID,
+    @RequestBody CustomerRegister customerRegister){
+        return customerService.writeCustomerReview(customerID,customerRegister);}}//[2][4][7][8]

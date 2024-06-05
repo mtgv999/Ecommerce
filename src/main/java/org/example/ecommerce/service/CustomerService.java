@@ -41,4 +41,12 @@ public class CustomerService {//고객
         Customer customerRequest=customerRepository.findBycustomerID(customerLoginRequest.getCustomerID());
         if(customerRequest.getCustomerPW().longValue()==customerLoginRequest.getCustomerPW())
             //고객 인지 여부를 고객 ID, PW 통해 확인
-        {return "OK!";}else return "Fail!";}}//[2][4]
+        {return "OK!";}else return "Fail!";}
+
+    public Customer changeCustomerUsed(Long customerID,CustomerRegister customerRegister){
+        Customer saved2=customerRepository.findBycustomerID(customerID);
+        saved2.changeCustomerUsed(customerRegister);return saved2;}
+
+    public Customer writeCustomerReview(Long customerID, CustomerRegister customerRegister) {
+        Customer saved3=customerRepository.findBycustomerID(customerID);
+        saved3.writeCustomerReview(customerRegister);return saved3;}}//[2][4][7][8]

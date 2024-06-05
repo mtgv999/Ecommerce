@@ -16,8 +16,11 @@ public class Customer extends BaseEntity {@Id//고객
     private Long customerID;//고객 아이디
     private Long customerPW;//고객 비밀 번호
     private String customerName;//고객 이름
+
     private Long customerAccountNumber;//고객 계좌 번호
     private Long customerPhoneNumber;//고객 핸드폰 번호
+    private String customerUsed;//구매 경험 여부
+    private String customerReview;//리뷰
 
     //private String accountNumber;
     //private Long balance;
@@ -27,4 +30,9 @@ public class Customer extends BaseEntity {@Id//고객
         this.customerPW=customerRegister.getCustomerPW();
         this.customerName =customerRegister.getCustomerName();
         this.customerAccountNumber =customerRegister.getCustomerAccountNumber();
-        this.customerPhoneNumber =customerRegister.getCustomerPhoneNumber();}}//[2][4]
+        this.customerPhoneNumber =customerRegister.getCustomerPhoneNumber();}
+
+   public void changeCustomerUsed(CustomerRegister customerRegister){
+       this.customerUsed ="yes";}
+    public void writeCustomerReview(CustomerRegister customerRegister){
+    this.customerReview=customerRegister.getCustomerReview();}}//[2][4]
