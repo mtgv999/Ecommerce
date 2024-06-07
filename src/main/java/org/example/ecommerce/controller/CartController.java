@@ -17,7 +17,7 @@ public class CartController{//장바구니
 
     @GetMapping("/get/{cartID}")//장바구니 정보 가져옴.
     public Cart getCart(@PathVariable Long cartID){
-        return  cartService.getCart(cartID);}
+        return cartService.getCart(cartID);}
 
     @PutMapping("/update/{cartID}")//장바구니 정보 수정
     public Cart updateCart(@PathVariable Long cartID,

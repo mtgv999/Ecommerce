@@ -15,11 +15,7 @@ public class SellerRegister {//판매자용 회원 등록
     private String sellerReview;//판매자 리뷰
 
     public static Seller sellerForm(SellerRegister sellerRegister){
-        Seller seller=Seller.builder()
-                .sellerPW(sellerRegister.getSellerPW())
+return Seller.builder().sellerPW(sellerRegister.getSellerPW())
                 .sellerName(sellerRegister.getSellerName())
                 .sellerAccountNumber(sellerRegister.getSellerAccountNumber())
-                .sellerPhoneNumber(sellerRegister.getSellerPhoneNumber())
-                //.sellerUsed(sellerRegister.getSellerUsed())
-                //.sellerReview(sellerRegister.getSellerReview())
-                .build();return seller;}}
+                .sellerPhoneNumber(sellerRegister.getSellerPhoneNumber()).build();}}
