@@ -12,7 +12,7 @@ public class CartRegister {//장바구니 등록
     private String productName;//상품 이름
     private Long sellerID;//판매자 아이디
     private Long customerID;//고객 아이디
-    private Long cartStock;//장바구니 내 상품들의 총 개수
+    private int cartStock;//장바구니 내 상품들의 총 개수
     private Long totalCost;//가격 총합
     private Long cartNumber;//장바구니 번호
 

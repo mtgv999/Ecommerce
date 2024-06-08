@@ -1,7 +1,6 @@
 package org.example.ecommerce.controller;
 import lombok.RequiredArgsConstructor;
 import org.example.ecommerce.domain.Product;
-import org.example.ecommerce.loginnrequest.SellerLoginRequest;
 import org.example.ecommerce.register.ProductRegister;
 import org.example.ecommerce.service.ProductService;
 import org.springframework.web.bind.annotation.*;

@@ -10,9 +10,10 @@
 //@AllArgsConstructor
 //@NoArgsConstructor
 //@EntityListeners(AuditingEntityListener.class)
-//public class OrderItem {@Id//주문받는 상품
+//public class OrdersItem {@Id//주문받는 상품
 //    @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    private Long orderItemId;
 //    @ManyToOne
 //    private Product product;
-//    private int orderCount;}
+//    private int ordersCount;
+//}
