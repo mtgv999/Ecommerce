@@ -60,7 +60,7 @@ public class Orders extends BaseEntity{@Id //주문
             message = "가격은 최대 9,999,999,999이어야 됨.")
     private Long cost;//상품 가격
 
-    @ManyToOne
+    /* @ManyToOne
     private Product product;
 
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
@@ -69,7 +69,7 @@ public class Orders extends BaseEntity{@Id //주문
 
     public double getTotalOrderPrice() {//주문한 상품들의 총 가격
         return items.stream().mapToDouble(item->item.getProduct()
-                .getCost()*item.getOrdersCount()).sum();}
+                .getCost()*item.getOrdersCount()).sum();}*/
 
     public void ordersUpdate(OrdersRegister ordersRegister){
         this.customerID =ordersRegister.getCustomerID();

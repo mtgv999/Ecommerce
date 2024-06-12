@@ -28,10 +28,10 @@ return productRepository.save(ProductRegister.productForm(productRegister));}
         Product saved=productRepository.findByproductID(productID);
         saved.pUpdate(productRegister);return saved;}
 
-    //public void deleteProduct(Long productID, SellerLoginRequest sellerLoginRequest) {
-    //    Seller SellerRequest=productRepository.findBysellerID(sellerLoginRequest.getSellerID());
-    //    if(SellerRequest.getSellerPW().longValue()==sellerLoginRequest.getSellerPW())
-    //        productRepository.deleteByproductID(productID);}
-
     public void deleteProduct(Long productID) {
             productRepository.deleteByproductID(productID);}}
+
+//public void deleteProduct(Long productID, SellerLoginRequest sellerLoginRequest) {
+//    Seller SellerRequest=productRepository.findBysellerID(sellerLoginRequest.getSellerID());
+//    if(SellerRequest.getSellerPW().longValue()==sellerLoginRequest.getSellerPW())
+//        productRepository.deleteByproductID(productID);}

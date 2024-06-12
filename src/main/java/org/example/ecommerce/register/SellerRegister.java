@@ -7,7 +7,7 @@ import org.example.ecommerce.domain.Seller;
 @NoArgsConstructor
 @Builder
 public class SellerRegister {//판매자용 회원 등록
-    private Long sellerPW;//판매자 비밀 번호
+    private String sellerPW;//판매자 비밀 번호
     private String sellerName;//판매자 이름
     private Long sellerAccountNumber;//판매자 계좌 번호
     private Long sellerPhoneNumber;//판매자 핸드폰 번호

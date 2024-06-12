@@ -2,7 +2,7 @@ spring:
   application:
     name=Ecommerce:
   datasource:
-    url: jdbc:h2:mem:test
+    url: jdbc:h2:mem:test #file:~/local/ecommercemem:test
     username: sa
     password:
     driverClassName: org.h2.Driver

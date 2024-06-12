@@ -1,0 +1,11 @@
+CREATE TABLE seller (
+    sellerID BIGINT AUTO_INCREMENT PRIMARY KEY,
+    sellerPW VARCHAR(255) NOT NULL,
+    sellerName VARCHAR(255) NOT NULL,
+    sellerAccountNumber BIGINT NOT NULL,
+    sellerPhoneNumber BIGINT NOT NULL,
+    sellerUsed VARCHAR(255),
+    sellerReview VARCHAR(255),
+    created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);

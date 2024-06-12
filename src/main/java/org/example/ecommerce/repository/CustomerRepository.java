@@ -10,4 +10,4 @@ public interface CustomerRepository extends JpaRepository<Customer,Long> {//고�
     Customer findBycustomerID(Long customerID);//고객 ID로 찾기
     void deleteBycustomerID(Long customerID);
     //Optional<Customer> findFirstByOrderByIdDesc();
-}//고객 계정 삭제[2][4]
+}//고객 계정 삭제[2][4][13]

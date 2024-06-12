@@ -24,12 +24,12 @@ public Product makeProduct(@RequestBody ProductRegister productRegister){
     @RequestBody ProductRegister productRegister){
 return productService.updateProduct(productID,productRegister);}
 
+@DeleteMapping("/delete/{productID}")//상품 계정 삭제
+    public void deleteProduct(@PathVariable Long productID){
+        productService.deleteProduct(productID);}}
+
 //@DeleteMapping("/delete/{productID}")//상품 계정 삭제
 //public void deleteProduct(@PathVariable Long productID,
 //@RequestBody SellerLoginRequest sellerLoginRequest){
 //    productService.deleteProduct(productID,sellerLoginRequest);}}
-
-@DeleteMapping("/delete/{productID}")//상품 계정 삭제
-    public void deleteProduct(@PathVariable Long productID){
-        productService.deleteProduct(productID);}}
 

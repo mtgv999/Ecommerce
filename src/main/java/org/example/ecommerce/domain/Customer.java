@@ -23,7 +23,7 @@ message = "PW는 최대 9,999,999,999,999,999이어야 됨.")
     private Long customerPW;//고객 비밀 번호
 
     @NotNull(message = "이름은 꼭 작성 해야 됨")
-    @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]{4,17}$",
+    @Pattern(regexp = "^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z\\d]{4,16}$",
     message = "이름은 최소 4자, 최대 16자, 최소 1개 문자, 숫자 모두 포함 필수")
     @Size(min=4,max=16,message = "이름: 최소 4자, 최대 16자")
     private String customerName;//고객 이름[7]
