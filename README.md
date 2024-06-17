@@ -16,15 +16,15 @@
 
 6. ResponseEntity를 활용하여 http 요청을 보낸 뒤 상품 등을 등록, 찾기, 수정, 삭제.//[13]
 
-7. 새로운 계정을 만들 때, PW, 이름 등에 각종 조건 및 제약을 걸어 조건에 맞춰 정보 작성.
+7. 새로운 계정을 만들 때, PW, 이름 등에 각종 조건 및 제약을 걸어 조건에 맞춰 정보 작성.//[7][9][10][11]
 
 ### build.gradle
 Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 
 ### 기술 스택
 Java, Spring, H2 Database //[2][4][5][6]
+
 ### ERD
-//[12][14]
 
 <img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/68af50d5-45f3-4764-9110-cbaf8cdc3d49">
 
