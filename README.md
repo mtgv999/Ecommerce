@@ -44,26 +44,43 @@ https://github.com/dev-sam32/zerobase-cms-project/blob/main/README.md, 미상, �
 
 [6] 계란, 티스토리, “Chapter 07. 사전 준비“, https://oranthy.tistory.com/269, 2022.08.02 ([4]의 원출처)
 
-[7] chatgpt, response to “여러 종류의 상품들을 주문하려고 할 때, 자바 스프링(gradle),위 코드를 바탕으로 Product, Order, OrderItem, 이 클래스들과 관련된 DTO, 사용자 인증, 예외처리, Controller, Service, Repository로 어떻게 코딩을 작성할 수 있습니까?”(외 여러 개 질문), https://chatgpt.com/c/803aac98-990b-4922-bd9e-97cda05ad57f, stock, 2024.5~2024.6 사이
+[7] chatgpt, response to “여러 종류의 상품들을 주문하려고 할 때, 자바 스프링(gradle),위 코드를 바탕으로 Product, Order, OrderItem, 
+이 클래스들과 관련된 DTO, 사용자 인증, 예외처리, Controller, Service, Repository로 어떻게 코딩을 작성할 수 있습니까?”(외 여러 개 질문),
+https://chatgpt.com/c/803aac98-990b-4922-bd9e-97cda05ad57f, stock, 2024.5~2024.6 사이, https://chat.openai.com.
 
 [8] 미상, 제로베이스, Part3. 예제를 통해 학습하는 스프링(Java)_Chapter 01. 사전 준비.pdf, “의존성” 외, 미상, 미상.
 
 [9] 자바신생아, okky, “비밀번호의 길이를 4~17자 사이로 제한하고 싶습니다.”, https://okky.kr/questions/1502513#answer-775248, 2024.06.03
 
-[10] ChatGPT, response to “Long cPW, cAccountNumber, cPhoneNumber은 1~10,000,000,000,000,000 사이의 값으로 제한을 하고 싶고, String cName의 길이는 1~30으로 제한하고 싶은데 이 코드를 어떻게 수정하면 되겠습니까?”, June 3, 2024, https://chat.openai.com.
+[10] ChatGPT, response to “Long cPW, cAccountNumber, cPhoneNumber은 1~10,000,000,000,000,000 사이의 값으로 제한을 하고 싶고,
+String cName의 길이는 1~30으로 제한하고 싶은데 이 코드를 어떻게 수정하면 되겠습니까?”, June 3, 2024, https://chat.openai.com.
 
-[11] ChatGPT, response to “cpw의 값을 0~10의 16제곱 미만으로 설정하려면 Controller, Service 작성 방법( 1~16자리로 설정)”,(질문이 너무 길어 줄임), https://chatgpt.com/c/87ba814d-5a81-4d8d-9f8b-3fe437c75670 June 3, 2024, https://chat.openai.com.
+[11] ChatGPT, response to “generated-requests.http에서 POST http://localhost:8080/customer/make Content-Type: application/json
+{"cpw": 12345678901234567890, "cname": "abcdefg", "cAccountNumber": 0, "cPhoneNumber": 0} 에서 cpw의 값을 0~10의 16제곱 미만으로 설정하려면
+Controller, Service를 어떻게 작성해야 됩니까?(비밀번호를 숫자를 1자리 이상 16자리 이하로 설정)”,
+https://chatgpt.com/c/87ba814d-5a81-4d8d-9f8b-3fe437c75670, June 3, 2024, https://chat.openai.com.
 
 [12] 본인, DBeaver, Create Table… (General-Connetctions-localhost:3306 -Database - testdb1 - Tables - <localhost> Script 18, 미상, 미상.(테이블 제작 형식)
 
 [13] Sanha Ko, 산하개발실록, “[SpringBoot] ResponseEntity로 http 응답 생성”, https://headf1rst.github.io/spring/response-entity/, 2022.05.27
 
-[14] Chatgpt, response to “CREATE TABLE ORDERS… 이 것이 잘못인가요?(질문이 너무 길어 줄임) sql로 테이블 만들려면 어떻게 해야 되나요?”,  https://chatgpt.com/c/609a4b93-63f2-495f-9b54-d98978688065, June 17, 2024.
+[14] Chatgpt, response to “CREATE TABLE ORDERS( 'ordersNumber' varchar(100) DEFAULT NULL, 'ordersName' varchar(100) DEFAULT NULL,
+'customerID' varchar(100) DEFAULT NULL, 'sellerID'varchar(100) DEFAULT NULL, 'cartID' varchar(100) DEFAULT NULL, 'productName'
+varchar(100) DEFAULT NULL, 'ordersCount' varchar(100) DEFAULT NULL, 'category' varchar(100) DEFAULT NULL, 'cost' varchar(100) 
+DEFAULT NULL); 이 것이 잘못인가요? sql로 테이블 만들려면 어떻게 해야 되나요?,  https://chatgpt.com/c/609a4b93-63f2-495f-9b54-d98978688065, June 17, 2024.
 
-[15] Chatgpt, response to “CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)[17]”(질문이 너무 길고, 여러 개임), https://chatgpt.com/c/562a5ef7-dab1-4a28-b590-44653a58f161, June 11(추측)
+[15] Chatgpt, response to “CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)”(질문이 너무 길고, 여러 개임),
+https://chatgpt.com/c/562a5ef7-dab1-4a28-b590-44653a58f161, June 11(추측), https://chat.openai.com.
 
-[16] Chatgpt, response to “SellerCustomer, Service에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout, GetProfile) (질문이 너무 길고, 여러 개임) “, https://chatgpt.com/c/45fd204e-7b44-48f7-a187-ca540d09f8df, June 11, 2024(추측)
+[16] Chatgpt, response to “SellerCustomer, Service에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout,
+GetProfile) (질문이 너무 길고, 여러 개임) “, “여기서 Seller, SellerRegister 클래스를 모두 PW 형태를 String으로 바꿔야 할 때 어떻게 코드를 바꿀 수 있겠습니까?”,
+https://chatgpt.com/c/45fd204e-7b44-48f7-a187-ca540d09f8df, June 11, 2024(추측), https://chat.openai.com.
 
-[17] Chatgpt, response to “(질문이 너무 길어 앞 부분 생략)어떻게 바꿔야 회원가입(계정을 새로 만들때) 중복된 이름이 확인되면 안 만들 수 있습니까?”, https://chatgpt.com/c/2ebd068f-9c34-4f7a-8859-ee0f171c13f3, June 11, 2024(추측)
+[17] Chatgpt, response to “(질문이 너무 길어 앞 부분 생략)어떻게 바꿔야 회원가입(계정을 새로 만들때) 중복된 이름이 확인되면 안 만들 수 있습니까?”, 
+https://chatgpt.com/c/2ebd068f-9c34-4f7a-8859-ee0f171c13f3, June 11, 2024(추측), https://chat.openai.com.
 
-[18] Chatgpt, response to "Foreign key constraint is incorrectly formed" dbeaver에서 무엇이 문제이고 어떻게 해서 foreign key를 만들 수 있습니까?", https://chatgpt.com/c/50776e5e-6bc1-4169-b534-925e3ea88e97, June 17, 2024.
+[18] Chatgpt, response to "Foreign key constraint is incorrectly formed" dbeaver에서 무엇이 문제이고 어떻게 해서 foreign key를 만들 수 있습니까?",
+https://chatgpt.com/c/50776e5e-6bc1-4169-b534-925e3ea88e97, June 17, 2024. https://chat.openai.com.
+
+[19]  ChatGPT, response to “How can i limit pw length to 4~17 characters in java spring intellij?”,
+https://chatgpt.com/c/47feb45b-b732-4bdf-a312-1ee1695653fd,  June 03, 2024, https://chat.openai.com. 

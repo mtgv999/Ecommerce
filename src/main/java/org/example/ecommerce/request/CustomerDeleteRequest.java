@@ -10,4 +10,4 @@ public class CustomerDeleteRequest {//고객 계정 삭제 요청
     @JsonProperty
     private Long customerID;
     @JsonProperty
-    private String customerPW;}//[2][4][5][6][15]
+    private String customerPW;}//[2][4][5][6][15][16]

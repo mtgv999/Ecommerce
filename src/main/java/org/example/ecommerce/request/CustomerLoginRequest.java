@@ -10,4 +10,4 @@ public class CustomerLoginRequest {//고객 로그인 확인 요청
     @JsonProperty
     private String customerName;
     @JsonProperty
-    private String customerPW;}//[2][4][5][6][15]
+    private String customerPW;}//[2][4][5][6][15][16]
