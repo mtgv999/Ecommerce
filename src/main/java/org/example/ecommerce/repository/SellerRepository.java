@@ -10,4 +10,4 @@ public interface SellerRepository extends JpaRepository<Seller,Long>{//판매자
     Seller findBySellerName(String sellerName);
     //판매자 이름으로 중복된 이름 계정 찾기 [16]
     Seller findBysellerID(Long sellerID);//판매자 ID로 계정 찾기
-    void deleteBysellerID(Long sellerID);}//판매자 ID로 찾아 계정 삭제
+    void deleteBysellerID(Long sellerID);}//판매자 ID로 찾아 계정 삭제 [2][4][5][6][15]

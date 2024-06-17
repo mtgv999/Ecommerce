@@ -17,6 +17,7 @@ public class OrdersRegister {//주문 등록
     private int ordersCount;//주문한 상품 개수
     private String category;//분류
     private Long cost;//상품 가격
+    private Long productID;//상품 아이디
 
     public static Orders ordersForm(OrdersRegister orderRegister){
 return Orders.builder().ordersName(orderRegister.getOrdersName())
@@ -26,4 +27,5 @@ return Orders.builder().ordersName(orderRegister.getOrdersName())
                 .productName(orderRegister.getProductName())
                 .ordersCount(orderRegister.getOrdersCount())
                 .category(orderRegister.getCategory())
-                .cost(orderRegister.getCost()).build();}}
+                .cost(orderRegister.getCost())
+        .productID(orderRegister.getProductID()).build();}}////[2][4][5][6][15]

@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ProductRepository extends JpaRepository<Product,Long>{//상품
     boolean existsByProductName(String productName);
-    //상품 이름으로 중복된 상품이 있는지 여부 확인[15]
+    //상품 이름으로 중복된 상품이 있는지 여부 확인 [15]
     Product findByproductID(Long productID);//상품 ID로 상품 찾기
-    void deleteByproductID(Long productID);}//상품 ID로 찾아 상품 삭제
+    void deleteByproductID(Long productID);}//상품 ID로 찾아 상품 삭제 [2][4][5][6][15]

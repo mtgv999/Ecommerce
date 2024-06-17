@@ -29,12 +29,12 @@ public class SellerService {//판매자
             &&seller.getSellerName().equals(sellerLoginRequest.getSellerName()))
             {return seller;}return null;} //출처: chatgpt 질의 응답
 
-    public void logoutSeller(HttpSession session)//판매자 로그아웃
+    public void logoutSeller(HttpSession session)//판매자용 로그아웃
     {session.invalidate();}
 
     public Optional<Seller> findBySellerID(Long sellerID){
-        //판매자 이름으로 중복된 계정 찾기[16]
-        return sellerRepository.findById(sellerID);}
+        //판매자 이름으로 중복된 계정 찾기
+        return sellerRepository.findById(sellerID);}//[16]
 
     public Seller getSeller(Long sellerID) {
         return sellerRepository.findById(sellerID).orElse(null);}
@@ -50,11 +50,3 @@ public class SellerService {//판매자
         if(seller.getSellerPW().equals(sellerDeleteRequest.getSellerPW())){
             sellerRepository.deleteById(sellerID);}
     else throw new RuntimeException("판매자 ID 삭제 실패 또는 발견 안 됨");}}//[15]
-
-   /* public Seller changeSellerUsed(Long sellerID, SellerRegister sellerRegister){
-        Seller saved2=sellerRepository.findBysellerID(sellerID);
-        saved2.changeSellerUsed(sellerRegister);return saved2;}
-
-    public Seller writeSellerReview(Long customerID, SellerRegister sellerRegister) {
-        Seller saved3=sellerRepository.findBysellerID(customerID);
-        saved3.writeSellerReview(sellerRegister);return saved3;}}*/

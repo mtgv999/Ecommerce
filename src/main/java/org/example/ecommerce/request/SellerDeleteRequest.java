@@ -5,8 +5,8 @@ import lombok.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class SellerDeleteRequest {//판매자 계정 확인 요청
+public class SellerDeleteRequest {//판매자 계정 삭제 요청
     @JsonProperty
     private Long sellerID;
     @JsonProperty
-    private String sellerPW;}
+    private String sellerPW;}//[2][4][5][6][15]

@@ -19,4 +19,4 @@ public class CustomerRegister {//고객용 회원 등록
             .customerPW(customerRegister.getCustomerPW())
             .customerAccountNumber(customerRegister.getCustomerAccountNumber())
             .customerPhoneNumber(customerRegister.getCustomerPhoneNumber())
-            .customerReview(customerRegister.getCustomerReview()).build();}}//[2][4]
+            .customerReview(customerRegister.getCustomerReview()).build();}}//[2][4][5][6][15]

@@ -26,9 +26,4 @@ public Product updateProduct(Long productID, ProductRegister productRegister) {
         saved.pUpdate(productRegister);return saved;}
 
     public void deleteProduct(Long productID) {
-        productRepository.deleteByproductID(productID);}}
-
-//public void deleteProduct(Long productID, SellerDeleteRequest sellerLoginRequest) {
-//    Seller SellerRequest=productRepository.findBysellerID(sellerLoginRequest.getSellerID());
-//    if(SellerRequest.getSellerPW().longValue()==sellerLoginRequest.getSellerPW())
-//        productRepository.deleteByproductID(productID);}
+        productRepository.deleteByproductID(productID);}}//[2][4][5][6][15]

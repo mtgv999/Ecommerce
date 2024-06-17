@@ -25,7 +25,8 @@ public class SellerController {//판매자
         }catch (DuplicateNameException e){
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}//[15]
 
-     @PostMapping("/login")//판매자가 로그인을 하려고 할 때, 판매자 이름, PW를 확인한 후에 로그인
+     @PostMapping("/login")
+     //판매자가 로그인을 하려고 할 때, 판매자 이름, PW를 확인한 후에 로그인
      public ResponseEntity<String> loginSeller
             (HttpSession session, @RequestBody SellerLoginRequest sellerLoginRequest){
         Seller seller = sellerService.authenticateSeller(sellerLoginRequest);
@@ -36,7 +37,7 @@ public class SellerController {//판매자
         }else{return ResponseEntity
                 .status(HttpStatus.UNAUTHORIZED).body("로그인 실패");}}
 
-    @PostMapping("/logout")//판매자 로그아웃
+    @PostMapping("/logout")//판매자용 로그아웃
     public ResponseEntity<String> logoutSeller(HttpSession session){//세션 무효화
     session.invalidate();return ResponseEntity.ok("로그아웃 성공");}
 
@@ -73,22 +74,4 @@ return seller.map(ResponseEntity::ok).orElseGet(()
             return ResponseEntity.ok("판매자 계정 성공적 삭제");
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).
-                    body("판매자 계정 삭제 실패 또는 발견 안 됨");}}}//[15]
-
-    /*@PutMapping("/update/{sellerID}/Used")
-    public ResponseEntity<Seller> updateSellerUsed(@PathVariable Long sellerID,
-    @RequestBody SellerRegister sellerRegister){
-
-        try { Seller updatesellerUsed=sellerService.updateSeller(sellerID,sellerRegister);
-            return ResponseEntity.ok(updatesellerUsed);
-        }catch (Exception e){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}
-
-    @PutMapping("/write/{sellerID}/Review")
-    public ResponseEntity<Seller> writeSellerReview(@PathVariable Long sellerID,
-@RequestBody SellerRegister sellerRegister){
-
-        try { Seller writeSellerReview=sellerService.updateSeller(sellerID,sellerRegister);
-            return ResponseEntity.ok(writeSellerReview);
-        }catch (Exception e){
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}}*/
+                    body("판매자 계정 삭제 실패 또는 발견 안 됨");}}}//[2][4][5][6][15]

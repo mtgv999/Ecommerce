@@ -41,7 +41,7 @@ public class Cart extends BaseEntity{@Id//장바구니
     @NotNull(message = "총 상품 개수는 꼭 작성 해야 됨")
     @Min(value=1, message = "총 상품 개수는 최소 1이어야 됨.")
     @Max(value = 999999, message = "총 상품 개수는 최대 999,999이어야 됨.")
-    private int cartStock;//장바구니 내 상품들의 총 개수
+    private int cartStock;//장바구니 내 상품들의 총 개수 [7]
 
     @NotNull(message = "가격 총합은 작성 해야 됨.")
     @Min(value=1, message = "가격 총합은 최소 1이어야 됨.")
@@ -55,10 +55,16 @@ public class Cart extends BaseEntity{@Id//장바구니
             message = "상품 번호 값은 최대 9,999,999,999,999,999이어야 됨.")
     private Long cartNumber;//장바구니 번호
 
+    @Min(value=1, message = "상품 아이디는 최소 1이어야 됨.")
+    @NotNull(message = "상품 아이디는 꼭 작성 해야 됨")
+    private Long productID;//상품 아이디 [9][10][11]
+
     public void cartUpdate(CartRegister cartRegister){
         this.cartName=cartRegister.getCartName();
         this.productName =cartRegister.getProductName();
         this.sellerID =cartRegister.getSellerID();
         this.customerID =cartRegister.getCustomerID();
         this.cartStock =cartRegister.getCartStock();
-        this.totalCost=cartRegister.getTotalCost();}}
+        this.totalCost=cartRegister.getTotalCost();
+        this.cartNumber=cartRegister.getCartNumber();
+        this.productID=cartRegister.getProductID();}}//[2][4][5][6]

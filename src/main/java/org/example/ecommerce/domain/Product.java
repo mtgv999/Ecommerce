@@ -36,11 +36,11 @@ message = "가격은 최대 9,999,999,999이어야 됨.")
 
     @NotNull(message = "분류는 꼭 작성 해야 됨.")
     @Size(min=1,max=30,message = "분류는 최소 1자, 최대 30자")
-    private String category;//분류
+    private String category;//상품 분류
 
     @NotNull(message ="상픔 정보는 꼭 작성 해야 됨" )
     @Size(min=1,message = "상품 정보는 최소 1자")
-    private String information;//정보
+    private String information;//상품 정보
 
     @NotNull(message = "상품 번호는 꼭 작성 해야 됨")
     @Min(value=1, message = "상품 번호는 최소 1이어야 됨.")
@@ -51,7 +51,7 @@ message = "상품 번호는 최대 9,999,999,999,999,999이어야 됨.")
     @NotNull(message = "상품 개수는 꼭 작성 해야 됨")
     @Min(value=1, message = "상품 개수는 최소 1이어야 됨.")
     @Max(value = 99999, message = "상품 개수는 최대 99,999이어야 됨.")
-    private int stock;//상품(재고) 개수
+    private int stock;//상품(재고) 개수 [7][9][10][15]
 
     public void pUpdate(ProductRegister productRegister){
         this.productName =productRegister.getProductName();
@@ -60,4 +60,4 @@ message = "상품 번호는 최대 9,999,999,999,999,999이어야 됨.")
         this.category=productRegister.getCategory();
         this.information=productRegister.getInformation();
         this.productNumber =productRegister.getProductNumber();
-        this.stock =productRegister.getStock();}}
+        this.stock =productRegister.getStock();}}//[2][4][5][6]

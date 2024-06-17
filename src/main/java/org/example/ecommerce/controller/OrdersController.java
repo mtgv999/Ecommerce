@@ -13,10 +13,6 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 public class OrdersController{//주문
     private final OrdersService ordersService;
-    /* @PostMapping ("/make0/{productID}/{ordersCount}")
-    public Orders makeOrder0
-     (@RequestParam Long productID, @RequestParam int ordersCount){
-        return ordersService.makeOrders0(productID, ordersCount);}*/
 
     @PostMapping("/make")//주문 만듬
 public ResponseEntity<?> makeOrders(@RequestBody OrdersRegister ordersRegister){
@@ -41,4 +37,4 @@ public ResponseEntity<?> makeOrders(@RequestBody OrdersRegister ordersRegister){
 
     @DeleteMapping("/delete/{ordersNumber}")//주문 삭제
     public void deleteOrders(@PathVariable Long ordersNumber){
-        ordersService.deleteOrders(ordersNumber);}}
+        ordersService.deleteOrders(ordersNumber);}}//[2][4][5][6][15]

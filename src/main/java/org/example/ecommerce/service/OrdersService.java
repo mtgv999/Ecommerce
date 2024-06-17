@@ -25,20 +25,5 @@ public class OrdersService {//주문
         saved.ordersUpdate(ordersRegister);return saved;}
 
     public void deleteOrders(Long ordersNumber) {
-        ordersRepository.deleteByOrdersNumber(ordersNumber);}}
-
-     /* public Orders makeOrders0(Long productID, int ordersCount) {
-        Product product=productRepository.findByproductID(productID);
-        if(product.getStock()<ordersCount){
-            throw new RuntimeException("재고 부족");}
-        product.setStock(product.getStock()-ordersCount);
-        productRepository.save(product);
-
-        Orders ordersItem=new Orders();ordersItem.setProduct(product);
-        ordersItem.setOrdersCount(ordersCount);Orders orders=new Orders();
-        orders.addItem(ordersItem);return orderRepository.save(orders);}*/
-
-        //OrdersItem ordersItem=new OrdersItem();ordersItem.setProduct(product);
-         //        ordersItem.setOrdersCount(ordersCount);Orders orders=new Orders();
-         //        orders.addItem(ordersItem);return orderRepository.save(orders);}
+        ordersRepository.deleteByOrdersNumber(ordersNumber);}}//[2][4][5][6][15]
 

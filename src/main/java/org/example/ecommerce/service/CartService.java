@@ -14,7 +14,7 @@ public class CartService {//장바구니
 
     public Cart makeCart(CartRegister cartRegister) {
         if(cartRepository.existsByCartName(cartRegister.getCartName())){
-            throw new DuplicateNameException("상품 이름 이미 있음");}
+            throw new DuplicateNameException("장바구니 이름 이미 있음");}
         return cartRepository.save(CartRegister.cartForm(cartRegister));}
 
     public Cart getCart(Long cartID) {
@@ -23,7 +23,7 @@ public class CartService {//장바구니
     public Cart updateCart(Long cartID, CartRegister cartRegister) {
         Cart saved=cartRepository.findById(cartID)
 .orElseThrow(()->new RuntimeException("장바구니 없음"));
-        saved.cartUpdate(cartRegister);return saved;}
+        saved.cartUpdate(cartRegister);return saved;}//[16]
 
     public void deleteCart(Long cartID) {
-        cartRepository.deleteByCartID(cartID);}}
+        cartRepository.deleteByCartID(cartID);}}//[2][4][5][6][15]
