@@ -70,10 +70,10 @@ varchar(100) DEFAULT NULL, 'ordersCount' varchar(100) DEFAULT NULL, 'category' v
 DEFAULT NULL); 이 것이 잘못인가요? sql로 테이블 만들려면 어떻게 해야 되나요?,
 https://chatgpt.com/c/609a4b93-63f2-495f-9b54-d98978688065, June 17, 2024, https://chat.openai.com.
 
-[15] Chatgpt, response to “CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)”(질문이 너무 길고, 여러 개임),
+[15] Chatgpt, response to “클래스 SellerCustomer, Service(내용 기반) CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)”(질문이 너무 길고, 여러 개임),
 https://chatgpt.com/c/562a5ef7-dab1-4a28-b590-44653a58f161, June 11(추측), https://chat.openai.com.
 
-[16] Chatgpt, response to “SellerCustomer, Service에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout,
+[16] Chatgpt, response to “클래 스 SellerCustomer, Service(내용 기반)에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout,
 GetProfile) (질문이 너무 길고, 여러 개임) “, “여기서 Seller, SellerRegister 클래스를 모두 PW 형태를 String으로 바꿔야 할 때 어떻게 코드를 바꿀 수 있겠습니까?”,
 https://chatgpt.com/c/45fd204e-7b44-48f7-a187-ca540d09f8df, June 11, 2024(추측), https://chat.openai.com.
 
