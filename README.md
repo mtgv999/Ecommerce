@@ -67,7 +67,8 @@ https://chatgpt.com/c/87ba814d-5a81-4d8d-9f8b-3fe437c75670, June 3, 2024, https:
 [14] Chatgpt, response to “CREATE TABLE ORDERS( 'ordersNumber' varchar(100) DEFAULT NULL, 'ordersName' varchar(100) DEFAULT NULL,
 'customerID' varchar(100) DEFAULT NULL, 'sellerID'varchar(100) DEFAULT NULL, 'cartID' varchar(100) DEFAULT NULL, 'productName'
 varchar(100) DEFAULT NULL, 'ordersCount' varchar(100) DEFAULT NULL, 'category' varchar(100) DEFAULT NULL, 'cost' varchar(100) 
-DEFAULT NULL); 이 것이 잘못인가요? sql로 테이블 만들려면 어떻게 해야 되나요?,  https://chatgpt.com/c/609a4b93-63f2-495f-9b54-d98978688065, June 17, 2024.
+DEFAULT NULL); 이 것이 잘못인가요? sql로 테이블 만들려면 어떻게 해야 되나요?,
+https://chatgpt.com/c/609a4b93-63f2-495f-9b54-d98978688065, June 17, 2024, https://chat.openai.com.
 
 [15] Chatgpt, response to “CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)”(질문이 너무 길고, 여러 개임),
 https://chatgpt.com/c/562a5ef7-dab1-4a28-b590-44653a58f161, June 11(추측), https://chat.openai.com.
