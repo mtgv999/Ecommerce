@@ -25,7 +25,6 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 Java, Spring, H2 Database //[2][4][5][6]
 
 ### ERD
-<img width="680" alt="스크린샷 2024-05-19 오후 5 22 54" src="https://github.com/mtgv999/Ecommerce/assets/149506393/bdfc403b-a081-4c52-a43e-ca00680a2323">
 
 ### 출처
 [1] 미상, 제로베이스, “Part11. 이커머스 강의 전반”, 미상, 미상.
