@@ -31,7 +31,7 @@ Java, Spring, H2 Database //[2][4][5][6]
 //[12][14][18]
 
 ### 출처
-[1] 미상, 제로베이스, “Part11. 이커머스 강의 전반”, 미상, 미상.
+[1] 미상, 제로베이스, “Part11. 이커머스 강의 전반”, 미상, 미상.(커밋 올리는 형식)
 
 [2] mgcztech576(본인), Github, ecommercemain, https://github.com/mgcztech576/ecommercemain, 2023.10.16
 
