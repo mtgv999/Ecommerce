@@ -25,6 +25,7 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 Java, Spring, H2 Database //[2][4][5][6]
 ### ERD
 <img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/68af50d5-45f3-4764-9110-cbaf8cdc3d49">
+
 //[12][14]
 
 ### 출처
@@ -43,7 +44,7 @@ https://github.com/dev-sam32/zerobase-cms-project/blob/main/README.md, 미상, �
 
 [7] chatgpt, response to “여러 종류의 상품들을 주문하려고 할 때, 자바 스프링(gradle),위 코드를 바탕으로 Product, Order, OrderItem, 이 클래스들과 관련된 DTO, 사용자 인증, 예외처리, Controller, Service, Repository로 어떻게 코딩을 작성할 수 있습니까?”(외 여러 개 질문), https://chatgpt.com/c/803aac98-990b-4922-bd9e-97cda05ad57f, stock, 2024.5~2024.6 사이
 
-[8] 미상, 제로베이스, Part3. 예제를 통해 학습하는 스프링(Java)_Chapter 01. 사전 준비.pdf, “의존성”, 미상, 미상.
+[8] 미상, 제로베이스, Part3. 예제를 통해 학습하는 스프링(Java)_Chapter 01. 사전 준비.pdf, “의존성” 외, 미상, 미상.
 
 [9] 자바신생아, okky, “비밀번호의 길이를 4~17자 사이로 제한하고 싶습니다.”, https://okky.kr/questions/1502513#answer-775248, 2024.06.03
 
