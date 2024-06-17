@@ -28,7 +28,7 @@ Java, Spring, H2 Database //[2][4][5][6]
 
 <img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/68af50d5-45f3-4764-9110-cbaf8cdc3d49">
 
-//[12][14]
+//[12][14][18]
 
 ### 출처
 [1] 미상, 제로베이스, “Part11. 이커머스 강의 전반”, 미상, 미상.
@@ -62,6 +62,8 @@ https://github.com/dev-sam32/zerobase-cms-project/blob/main/README.md, 미상, �
 
 [15] Chatgpt, response to “CRUD(Create, Read, Update, Delete를 ResponseEntity를 통한 http 요청)[17]”(질문이 너무 길고, 여러 개임), https://chatgpt.com/c/562a5ef7-dab1-4a28-b590-44653a58f161, June 11(추측)
 
-[16] Chatgpt, response to “SellerCustomer, Service에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout, GetProfile) (질문이 너무 길고, 여러 개임) “, https://chatgpt.com/c/45fd204e-7b44-48f7-a187-ca540d09f8df, June 11(추측)
+[16] Chatgpt, response to “SellerCustomer, Service에서의 회원가입, 로그인, 로그아웃을 작성하는 방법(핵심 키워드: Register, Login, Logout, GetProfile) (질문이 너무 길고, 여러 개임) “, https://chatgpt.com/c/45fd204e-7b44-48f7-a187-ca540d09f8df, June 11, 2024(추측)
 
-[17] Chatgpt, response to “(질문이 너무 길어 앞 부분 생략)어떻게 바꿔야 회원가입(계정을 새로 만들때) 중복된 이름이 확인되면 안 만들 수 있습니까?”, https://chatgpt.com/c/2ebd068f-9c34-4f7a-8859-ee0f171c13f3, 2024.06
+[17] Chatgpt, response to “(질문이 너무 길어 앞 부분 생략)어떻게 바꿔야 회원가입(계정을 새로 만들때) 중복된 이름이 확인되면 안 만들 수 있습니까?”, https://chatgpt.com/c/2ebd068f-9c34-4f7a-8859-ee0f171c13f3, June 11, 2024(추측)
+
+[18] Chatgpt, response to "Foreign key constraint is incorrectly formed" dbeaver에서 무엇이 문제이고 어떻게 해서 foreign key를 만들 수 있습니까?", https://chatgpt.com/c/50776e5e-6bc1-4169-b534-925e3ea88e97, June 17, 2024.
