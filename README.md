@@ -14,7 +14,7 @@
 
 5. 주문 추가, 찾기, 변경, 삭제 - 고객이 상품을 주문한 뒤 주문 확인 및 상품 구매 등을 할 수 있음. 주문은 등록한 순서대로 부여 받는다.
 
-6. ResponseEntity를 활용하여 http 요청을 보낸 뒤 상품 등을 등록, 찾기, 수정, 삭제. //[13]
+6. ResponseEntity를 활용하여 http 요청을 보낸 뒤 상품 등을 등록, 찾기, 수정, 삭제.//[13]
 
 7. 새로운 계정을 만들 때, PW, 이름 등에 각종 조건 및 제약을 걸어 조건에 맞춰 정보 작성.
 
@@ -23,11 +23,8 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 
 ### 기술 스택
 Java, Spring, H2 Database //[2][4][5][6]
-
-
 ### ERD
 <img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/68af50d5-45f3-4764-9110-cbaf8cdc3d49">
-
 //[12][14]
 
 ### 출처
@@ -48,7 +45,7 @@ https://github.com/dev-sam32/zerobase-cms-project/blob/main/README.md, 미상, �
 
 [8] 미상, 제로베이스, Part3. 예제를 통해 학습하는 스프링(Java)_Chapter 01. 사전 준비.pdf, “의존성”, 미상, 미상.
 
-[9] 자바신생아, okky, “비밀번호의 길이를 4~17자 사이로 제한하고 싶습니다.”, https://okky.kr/questions/1502513#answer-775248, 2024.06.03
+[9] 자바신생아, okky, “비밀번호의 길이를 4~17자 사이로 제한하고 싶습니다.”, https://okky.kr/questions/1502513#answer-775248, 2024.06.03
 
 [10] ChatGPT, response to “Long cPW, cAccountNumber, cPhoneNumber은 1~10,000,000,000,000,000 사이의 값으로 제한을 하고 싶고, String cName의 길이는 1~30으로 제한하고 싶은데 이 코드를 어떻게 수정하면 되겠습니까?”, June 3, 2024, https://chat.openai.com.
 
