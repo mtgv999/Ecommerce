@@ -1,5 +1,3 @@
-<img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/1cea2110-cd3f-4231-b3cb-f558da569881"># 이커머스 - 물품 구매, 판매
-
 ### 상세정보
 1. 회원 가입: 회원가입 할 때는 고객, 판매자의 PW, 이름, 계좌 번호, 핸드폰 번호를 기입하고, ID는 등록한 순서대로 부여 받는다. 결과로 리뷰도 쓸 수 있게 한다. 
 
@@ -24,8 +22,6 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 ### 기술 스택
 Java, Spring, H2 Database //[2][4][5][6]
 ### ERD
-<img width="680" alt="스크린샷 2024-05-19 오후 5 22 54" src="https://github.com/mtgv999/Ecommerce/assets/149506393/bdfc403b-a081-4c52-a43e-ca00680a2323">
-
 
 <img width="961" alt="스크린샷 2024-06-17 오후 4 57 10" src="https://github.com/mtgv999/Ecommerce/assets/149506393/c0cbe093-fdc2-4b4c-9518-fbfed3fbcb75">
 
