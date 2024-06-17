@@ -16,7 +16,7 @@
 
 6. ResponseEntity를 활용하여 http 요청을 보낸 뒤 상품 등을 등록, 찾기, 수정, 삭제.//[13]
 
-7. 새로운 계정을 만들 때, PW, 이름 등에 각종 조건 및 제약을 걸어 조건에 맞춰 정보 작성.//[7][9][10][11]
+7. 새로운 계정을 만들 때, PW, 이름 등에 각종 조건 및 제약을 걸어 조건에 맞춰 정보 작성.//[7][9][10][11][19]
 
 ### build.gradle
 Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation

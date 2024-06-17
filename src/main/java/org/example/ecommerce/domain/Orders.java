@@ -65,7 +65,7 @@ public class Orders extends BaseEntity{@Id //주문
 
     @Min(value=1, message = "상품 아이디는 최소 1이어야 됨.")
     @NotNull(message = "상품 아이디는 꼭 작성 해야 됨")
-    private Long productID;//상품 아이디 [7][9][10][11]
+    private Long productID;//상품 아이디 [7][9][10][11][19]
 
     public void ordersUpdate(OrdersRegister ordersRegister){
         this.ordersName=ordersRegister.getOrdersName();

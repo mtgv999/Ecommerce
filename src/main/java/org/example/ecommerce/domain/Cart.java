@@ -57,7 +57,7 @@ public class Cart extends BaseEntity{@Id//장바구니
 
     @Min(value=1, message = "상품 아이디는 최소 1이어야 됨.")
     @NotNull(message = "상품 아이디는 꼭 작성 해야 됨")
-    private Long productID;//상품 아이디 [9][10][11]
+    private Long productID;//상품 아이디 [9][10][11][19]
 
     public void cartUpdate(CartRegister cartRegister){
         this.cartName=cartRegister.getCartName();

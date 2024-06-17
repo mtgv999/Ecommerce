@@ -51,7 +51,7 @@ message = "상품 번호는 최대 9,999,999,999,999,999이어야 됨.")
     @NotNull(message = "상품 개수는 꼭 작성 해야 됨")
     @Min(value=1, message = "상품 개수는 최소 1이어야 됨.")
     @Max(value = 99999, message = "상품 개수는 최대 99,999이어야 됨.")
-    private int stock;//상품(재고) 개수 [7][9][10][15]
+    private int stock;//상품(재고) 개수 [7][9][10][19]
 
     public void pUpdate(ProductRegister productRegister){
         this.productName =productRegister.getProductName();

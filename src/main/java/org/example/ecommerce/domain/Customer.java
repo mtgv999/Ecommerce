@@ -40,7 +40,7 @@ message = "계좌 번호는 최대 9,999,999,999,999,999이어야 됨.")
 message = "휴대폰 번호는 최대 9,999,999,999,999,999이어야 됨.")
     private Long customerPhoneNumber;//고객 핸드폰 번호
 
-    private String customerReview;//고객 리뷰 [9][10][11]
+    private String customerReview;//고객 리뷰 [9][10][11][19]
 
     public void customerUpdate(CustomerRegister customerRegister){
         this.customerName =customerRegister.getCustomerName();
