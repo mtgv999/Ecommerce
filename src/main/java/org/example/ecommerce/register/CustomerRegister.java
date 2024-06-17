@@ -14,9 +14,6 @@ public class CustomerRegister {//고객용 회원 등록
     private Long customerPhoneNumber;//고객 핸드폰 번호
     private String customerReview;//고객 리뷰
 
-    //private Long userId;
-    //private String accountNumber;
-    //private LocalDateTime registeredAt;
 
     public static Customer customerForm(CustomerRegister customerRegister){
     return Customer.builder().customerName(customerRegister.getCustomerName())
