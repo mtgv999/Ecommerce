@@ -51,7 +51,7 @@ public class Orders extends BaseEntity{@Id //주문
     @NotNull(message = "상품 개수는 꼭 작성 해야 됨")
     @Min(value=1, message = "상품 개수는 최소 1이어야 됨.")
     @Max(value = 999999, message = "상품 개수는 최대 999,999이어야 됨.")
-    private int ordersCount;;//주문한 상품 개수 [7]
+    private int ordersCount;;//주문한 상품 개수
 
     @NotNull(message = "분류는 꼭 작성 해야 됨.")
     @Size(min=1,max=30, message = "분류는 최소 1자, 최대 30자")
@@ -65,7 +65,7 @@ public class Orders extends BaseEntity{@Id //주문
 
     @Min(value=1, message = "상품 아이디는 최소 1이어야 됨.")
     @NotNull(message = "상품 아이디는 꼭 작성 해야 됨")
-    private Long productID;//상품 아이디 [9][10][11]
+    private Long productID;//상품 아이디 [7][9][10][11]
 
     public void ordersUpdate(OrdersRegister ordersRegister){
         this.ordersName=ordersRegister.getOrdersName();
@@ -76,4 +76,4 @@ public class Orders extends BaseEntity{@Id //주문
         this.ordersCount =ordersRegister.getOrdersCount();
         this.category=ordersRegister.getCategory();
         this.cost=ordersRegister.getCost();
-        this.productID=ordersRegister.getProductID();}}
+        this.productID=ordersRegister.getProductID();}}//[2][3][4][5][6]

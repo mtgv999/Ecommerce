@@ -23,7 +23,7 @@ public class CartService {//장바구니
     public Cart updateCart(Long cartID, CartRegister cartRegister) {
         Cart saved=cartRepository.findById(cartID)
 .orElseThrow(()->new RuntimeException("장바구니 없음"));
-        saved.cartUpdate(cartRegister);return saved;}//[16]
+        saved.cartUpdate(cartRegister);return saved;}
 
     public void deleteCart(Long cartID) {
         cartRepository.deleteByCartID(cartID);}}//[2][4][5][6][15]

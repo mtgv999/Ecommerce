@@ -23,7 +23,7 @@ public class SellerController {//판매자
         try{Seller seller=sellerService.makeSeller(sellerRegister);
         return ResponseEntity.status(HttpStatus.CREATED).body(seller);
         }catch (DuplicateNameException e){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}//[15]
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
 
      @PostMapping("/login")
      //판매자가 로그인을 하려고 할 때, 판매자 이름, PW를 확인한 후에 로그인

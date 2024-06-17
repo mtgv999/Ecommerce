@@ -39,11 +39,11 @@ public class Seller extends BaseEntity { @Id//판매자
             message = "휴대폰 번호는 최대 9,999,999,999,999,999이어야 됨.")
     private Long sellerPhoneNumber;//판매자 핸드폰 번호
 
-    private String sellerReview;//판매자 리뷰 [4][9][10][11]
+    private String sellerReview;//판매자 리뷰 [9][10][11]
 
     public void sellerUpdate(SellerRegister sellerRegister){
         this.sellerName =sellerRegister.getSellerName();
         this.sellerPW=sellerRegister.getSellerPW();
         this.sellerAccountNumber =sellerRegister.getSellerAccountNumber();
         this.sellerPhoneNumber =sellerRegister.getSellerPhoneNumber();
-        this.sellerReview=sellerRegister.getSellerReview();}}
+        this.sellerReview=sellerRegister.getSellerReview();}}//[2][4][5][6]

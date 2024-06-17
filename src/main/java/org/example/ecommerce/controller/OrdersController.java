@@ -37,4 +37,4 @@ public ResponseEntity<?> makeOrders(@RequestBody OrdersRegister ordersRegister){
 
     @DeleteMapping("/delete/{ordersNumber}")//주문 삭제
     public void deleteOrders(@PathVariable Long ordersNumber){
-        ordersService.deleteOrders(ordersNumber);}}//[2][4][5][6][15]
+        ordersService.deleteOrders(ordersNumber);}}//[2][3][4][5][6][15]

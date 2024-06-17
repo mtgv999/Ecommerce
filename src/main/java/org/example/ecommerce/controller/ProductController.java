@@ -19,7 +19,7 @@ public class ProductController {//상품
         try{Product product= productService.makeProduct(productRegister);
         return ResponseEntity.status(HttpStatus.CREATED).body(product);
         }catch (DuplicateNameException e){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}//[15]
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
 
     @GetMapping("/get/{productID}")//상품 정보 가져옴.
     public ResponseEntity<Product> getProduct(@PathVariable Long productID){

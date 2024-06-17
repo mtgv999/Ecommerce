@@ -49,4 +49,4 @@ public class SellerService {//판매자
                 .orElseThrow(()->new RuntimeException("판매자 없음"));
         if(seller.getSellerPW().equals(sellerDeleteRequest.getSellerPW())){
             sellerRepository.deleteById(sellerID);}
-    else throw new RuntimeException("판매자 ID 삭제 실패 또는 발견 안 됨");}}//[15]
+    else throw new RuntimeException("판매자 ID 삭제 실패 또는 발견 안 됨");}}//[2][4][5][6][15]

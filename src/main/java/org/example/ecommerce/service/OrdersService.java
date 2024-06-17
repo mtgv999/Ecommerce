@@ -25,5 +25,5 @@ public class OrdersService {//주문
         saved.ordersUpdate(ordersRegister);return saved;}
 
     public void deleteOrders(Long ordersNumber) {
-        ordersRepository.deleteByOrdersNumber(ordersNumber);}}//[2][4][5][6][15]
+        ordersRepository.deleteByOrdersNumber(ordersNumber);}}//[2][3][4][5][6][15]
 

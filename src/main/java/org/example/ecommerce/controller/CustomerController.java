@@ -27,7 +27,7 @@ public ResponseEntity<?> makeCustomer(@RequestBody CustomerRegister customerRegi
         try{Customer customer=customerService.makeCustomer(customerRegister);
             return ResponseEntity.status(HttpStatus.CREATED).body(customer);
         }catch (DuplicateNameException e){
-            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}//[15]
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
 
     @PostMapping("/login")
     //고객이 로그인을 하려고 할 때, 고객 이름, PW를 확인한 후에 로그인
