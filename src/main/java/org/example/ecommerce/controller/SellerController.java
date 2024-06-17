@@ -1,56 +1,94 @@
 package org.example.ecommerce.controller;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
-import org.example.ecommerce.domain.Customer;
+import org.example.ecommerce.DuplicateNameException;
 import org.example.ecommerce.domain.Seller;
-import org.example.ecommerce.loginnrequest.SellerLoginRequest;
-import org.example.ecommerce.register.CustomerRegister;
+import org.example.ecommerce.request.SellerDeleteRequest;
+import org.example.ecommerce.request.SellerLoginRequest;
 import org.example.ecommerce.register.SellerRegister;
-import org.example.ecommerce.service.ProductService;
 import org.example.ecommerce.service.SellerService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/seller")
 @RequiredArgsConstructor
 public class SellerController {//판매자
     private final SellerService sellerService;
-    private final ProductService productService;
 
     @PostMapping("/make")//판매자 계정 만듬
-    public Seller makeSeller(@RequestBody SellerRegister sellerRegister){
-        return sellerService.makeSeller(sellerRegister);}
+   public ResponseEntity<?> makeSeller(@RequestBody SellerRegister sellerRegister){
+        try{Seller seller=sellerService.makeSeller(sellerRegister);
+        return ResponseEntity.status(HttpStatus.CREATED).body(seller);
+        }catch (DuplicateNameException e){
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}//[15]
 
-    @GetMapping("/get/{sellerID}")//판매자 정보 가져옴.
-    public Seller getSeller(@PathVariable Long sellerID){
-        return sellerService.getSeller(sellerID);}
+     @PostMapping("/login")//판매자가 로그인을 하려고 할 때, 판매자 이름, PW를 확인한 후에 로그인
+     public ResponseEntity<String> loginSeller
+            (HttpSession session, @RequestBody SellerLoginRequest sellerLoginRequest){
+        Seller seller = sellerService.authenticateSeller(sellerLoginRequest);
+
+        if(seller!=null) {//세션에 판매자 ID 저장
+            session.setAttribute("sellerID", seller.getSellerID());
+            return ResponseEntity.ok("로그인 성공");
+        }else{return ResponseEntity
+                .status(HttpStatus.UNAUTHORIZED).body("로그인 실패");}}
+
+    @PostMapping("/logout")//판매자 로그아웃
+    public ResponseEntity<String> logoutSeller(HttpSession session){//세션 무효화
+    session.invalidate();return ResponseEntity.ok("로그아웃 성공");}
+
+    @GetMapping("/profile")//로그인된 판매자 프로필 정보 가져옴
+    public ResponseEntity<Seller> getProfile(HttpSession session){
+        Long sellerID=(Long) session.getAttribute("sellerID");
+
+if(sellerID==null){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();}
+Optional<Seller> seller=sellerService.findBySellerID(sellerID);
+return seller.map(ResponseEntity::ok).orElseGet(()
+    -> ResponseEntity.notFound().build());}//[16]
+
+    @GetMapping("/get/{sellerID}")//판매자 정보 가져옴
+    public ResponseEntity<Seller> getSeller(@PathVariable Long sellerID){
+        Seller seller=sellerService.getSeller(sellerID);
+        if(seller!=null) {return ResponseEntity.ok(seller);
+        }else{return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}
 
     @PutMapping("/update/{sellerID}")//판매자 정보 수정
-    public Seller updateSeller(@PathVariable Long sellerID,
-    @RequestBody SellerRegister sellerRegister){
-return sellerService.updateSeller(sellerID,sellerRegister);}
+    public ResponseEntity<Seller> updateSeller(@PathVariable Long sellerID,
+        @RequestBody SellerRegister sellerRegister){
 
-    @PutMapping("/update0/{sellerID}")//판매자 정보 수정
-    public Seller updateSeller0(@PathVariable Long sellerID,
-@RequestBody SellerLoginRequest sellerLoginRequest, @RequestBody SellerRegister sellerRegister){
-return sellerService.updateSeller0(sellerID,sellerLoginRequest,sellerRegister);}
+        try { Seller updateseller=sellerService.updateSeller(sellerID,sellerRegister);
+            return ResponseEntity.ok(updateseller);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}
 
     @DeleteMapping("/delete/{sellerID}")
     //판매자 계정을 삭제 하려고 할 때, 판매자 ID, PW를 확인한 후에 삭제.
-    public void deleteSeller(@PathVariable Long sellerID,
-    @RequestBody SellerLoginRequest sellerLoginRequest){
-        sellerService.deleteSeller(sellerID,sellerLoginRequest);}
+    public ResponseEntity<String> deleteSeller(@PathVariable Long sellerID,
+    @RequestBody SellerDeleteRequest sellerDeleteRequest){
 
-    @PostMapping("/sellerLogin")//고객이 회원 가입 했는지의 여부를
-    //로그인(고객 ID, PW 확인)을 통해 확인 하려는 요청.
-    public String sellerLogin(@RequestBody SellerLoginRequest sellerLoginRequestRequest){
-        return sellerService.sellerLogin(sellerLoginRequestRequest);}
+        try { sellerService.deleteSeller(sellerID, sellerDeleteRequest);
+            return ResponseEntity.ok("판매자 계정 성공적 삭제");
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).
+                    body("판매자 계정 삭제 실패 또는 발견 안 됨");}}}//[15]
 
-    @PutMapping("/update/{sellerID}/used")
-    public Seller updateSellerUsed(@PathVariable Long sellerID,
-    @RequestBody SellerRegister customerRegister){
-        return sellerService.changeSellerUsed(sellerID,customerRegister);}
-
-    @PutMapping("/write/{sellerID}/review")
-    public Seller writeSellerReview(@PathVariable Long sellerID,
+    /*@PutMapping("/update/{sellerID}/Used")
+    public ResponseEntity<Seller> updateSellerUsed(@PathVariable Long sellerID,
     @RequestBody SellerRegister sellerRegister){
-        return sellerService.writeSellerReview(sellerID,sellerRegister);}}
+
+        try { Seller updatesellerUsed=sellerService.updateSeller(sellerID,sellerRegister);
+            return ResponseEntity.ok(updatesellerUsed);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}
+
+    @PutMapping("/write/{sellerID}/Review")
+    public ResponseEntity<Seller> writeSellerReview(@PathVariable Long sellerID,
+@RequestBody SellerRegister sellerRegister){
+
+        try { Seller writeSellerReview=sellerService.updateSeller(sellerID,sellerRegister);
+            return ResponseEntity.ok(writeSellerReview);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}}*/

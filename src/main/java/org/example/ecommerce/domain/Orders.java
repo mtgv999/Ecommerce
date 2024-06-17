@@ -15,13 +15,16 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
-//@Table(name = "orders")
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 public class Orders extends BaseEntity{@Id //주문
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ordersNumber;//주문 번호
+
+    @NotNull(message = "이름은 꼭 작성 해야 됨.")
+    @Size(min=1,max=30,message = "이름은 최소 1자, 최대 30자")
+    private String ordersName;//주문 이름
 
     @NotNull(message = "아이디는 꼭 작성 해야 됨")
     @Min(value=1, message = "아이디는 최소 1이어야 됨.")
@@ -60,8 +63,7 @@ public class Orders extends BaseEntity{@Id //주문
             message = "가격은 최대 9,999,999,999이어야 됨.")
     private Long cost;//상품 가격
 
-    @ManyToOne
-    private Product product;
+    /*@ManyToOne private Product product;
 
     @OneToMany(cascade = CascadeType.ALL,orphanRemoval = true)
     private List<Orders> items=new ArrayList<>();//주문한 상품들
@@ -69,9 +71,10 @@ public class Orders extends BaseEntity{@Id //주문
 
     public double getTotalOrderPrice() {//주문한 상품들의 총 가격
         return items.stream().mapToDouble(item->item.getProduct()
-                .getCost()*item.getOrdersCount()).sum();}
+                .getCost()*item.getOrdersCount()).sum();}*/
 
     public void ordersUpdate(OrdersRegister ordersRegister){
+        this.ordersName=ordersRegister.getOrdersName();
         this.customerID =ordersRegister.getCustomerID();
         this.sellerID =ordersRegister.getSellerID();
         this.cartID=ordersRegister.getCartID();

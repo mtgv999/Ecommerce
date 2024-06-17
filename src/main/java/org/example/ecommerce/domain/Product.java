@@ -18,15 +18,15 @@ public class Product extends BaseEntity{@Id//상품
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long productID;//상품 아이디
 
+    @NotNull(message = "이름은 꼭 작성 해야 됨.")
+    @Size(min=1,max=30,message = "이름은 최소 1자, 최대 30자")
+    private String productName;//상품 이름
+
     @NotNull(message = "아이디는 꼭 작성 해야 됨")
     @Min(value=1, message = "아이디는 최소 1이어야 됨.")
     @Max(value = 9999999999999999L,
             message = "아이디는 최대 9,999,999,999,999,999이어야 됨.")
     private Long sellerID;//판매자 아이디
-
-    @NotNull(message = "이름은 꼭 작성 해야 됨.")
-    @Size(min=1,max=30,message = "이름은 최소 1자, 최대 30자")
-    private String productName;//상품 이름
 
     @NotNull(message = "가격은 꼭 작성 해야 됨.")
     @Min(value=1, message = "가격은 최소 1이어야 됨.")
@@ -54,8 +54,8 @@ message = "상품 번호는 최대 9,999,999,999,999,999이어야 됨.")
     private int stock;//상품(재고) 개수
 
     public void pUpdate(ProductRegister productRegister){
-        this.sellerID =productRegister.getSellerID();
         this.productName =productRegister.getProductName();
+        this.sellerID =productRegister.getSellerID();
         this.cost=productRegister.getCost();
         this.category=productRegister.getCategory();
         this.information=productRegister.getInformation();

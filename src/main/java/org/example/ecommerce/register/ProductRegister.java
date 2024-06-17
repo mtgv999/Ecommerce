@@ -7,8 +7,8 @@ import org.example.ecommerce.domain.Product;
 @NoArgsConstructor
 @Builder
 public class ProductRegister {//상품용 회원 등록
-    private Long sellerID;//판매자 아이디
     private String productName;//상품 이름
+    private Long sellerID;//판매자 아이디
     private Long cost;//가격
     private String category;//분류
     private String information;//정보
@@ -17,8 +17,8 @@ public class ProductRegister {//상품용 회원 등록
 
     public static Product productForm(ProductRegister productRegister){
         return Product.builder()
-                .sellerID(productRegister.getSellerID())
                 .productName(productRegister.getProductName())
+                .sellerID(productRegister.getSellerID())
                 .cost(productRegister.getCost())
                 .category(productRegister.getCategory())
                 .information(productRegister.getInformation())
