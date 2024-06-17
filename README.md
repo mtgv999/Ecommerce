@@ -23,7 +23,7 @@ Spring Web, Spring Data JPA, H2 Database, Lombok, Spring Security, Validation
 
 ### 기술 스택
 Java, Spring, H2 Database //[2][4][5][6]
-![](/Users/mgcztech/Desktop/스크린샷 2024-06-17 오후 4.57.10.png)
+
 ### ERD
 <img width="680" alt="스크린샷 2024-05-19 오후 5 22 54" src="https://github.com/mtgv999/Ecommerce/assets/149506393/bdfc403b-a081-4c52-a43e-ca00680a2323">
 
