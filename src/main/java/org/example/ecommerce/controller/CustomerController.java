@@ -76,6 +76,6 @@ if(customerID==null){return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build
 
         try{customerService.deleteCustomer(customerID,customerDeleteRequest);
     return ResponseEntity.ok("고객 계정 성공적 삭제");
-}catch (Exception e){
+    }catch (Exception e){
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).
-body("고객 ID 삭제 실패 또는 발견 안 됨");}}}//[2][4][5][6][15]
+    body("고객 ID 삭제 실패 또는 발견 안 됨");}}}//[2][4][5][6][15]

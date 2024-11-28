@@ -21,8 +21,8 @@ public class ProductController {//상품
         }catch (DuplicateNameException e){
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());}}
 
-    @GetMapping("/get/{productID}")//상품 정보 가져옴.
-    public ResponseEntity<Product> getProduct(@PathVariable Long productID){
+        @GetMapping("/get/{productID}")//상품 정보 가져옴.
+        public ResponseEntity<Product> getProduct(@PathVariable Long productID){
         Product product= productService.getProduct(productID);
         if(product!=null) {return ResponseEntity.ok(product);
         }else{return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);}}

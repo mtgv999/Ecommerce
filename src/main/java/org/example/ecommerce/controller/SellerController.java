@@ -60,7 +60,7 @@ return seller.map(ResponseEntity::ok).orElseGet(()
     public ResponseEntity<Seller> updateSeller(@PathVariable Long sellerID,
         @RequestBody SellerRegister sellerRegister){
 
-        try { Seller updateseller=sellerService.updateSeller(sellerID,sellerRegister);
+        try{ Seller updateseller=sellerService.updateSeller(sellerID,sellerRegister);
             return ResponseEntity.ok(updateseller);
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(null);}}

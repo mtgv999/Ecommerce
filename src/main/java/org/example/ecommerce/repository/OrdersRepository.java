@@ -1,6 +1,5 @@
 package org.example.ecommerce.repository;
 import org.example.ecommerce.domain.Orders;
-import org.example.ecommerce.domain.Seller;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 @Repository

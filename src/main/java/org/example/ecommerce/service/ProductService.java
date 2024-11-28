@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class ProductService {//상품
     private final ProductRepository productRepository;
+
     public Product makeProduct(ProductRegister productRegister) {
         if(productRepository.existsByProductName(productRegister.getProductName())){
             throw new DuplicateNameException("상품 이름 이미 있음");}

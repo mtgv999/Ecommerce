@@ -15,7 +15,7 @@ public class OrdersController{//주문
     private final OrdersService ordersService;
 
     @PostMapping("/make")//주문 만듬
-public ResponseEntity<?> makeOrders(@RequestBody OrdersRegister ordersRegister){
+    public ResponseEntity<?> makeOrders(@RequestBody OrdersRegister ordersRegister){
         try{Orders orders= ordersService.makeOrders(ordersRegister);
             return ResponseEntity.status(HttpStatus.CREATED).body(orders);
         }catch (DuplicateNameException e){

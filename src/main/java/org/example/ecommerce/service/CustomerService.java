@@ -24,7 +24,8 @@ public class CustomerService {//고객
 
     public Customer authenticateCustomer(CustomerLoginRequest customerLoginRequest){
         //고객 인증 - 고객이 로그인을 하려고 할 때, 고객 이름, PW를 확인한 후에 로그인
-        Customer customer= customerRepository.findByCustomerName(customerLoginRequest.getCustomerName());
+        Customer customer= customerRepository.findByCustomerName
+                (customerLoginRequest.getCustomerName());
         if(customer.getCustomerPW().equals(customerLoginRequest.getCustomerPW())
                 &&customer.getCustomerName().equals(customerLoginRequest.getCustomerName()))
         {return customer;}return null;} //출처: chatgpt 질의 응답

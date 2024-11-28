@@ -6,11 +6,13 @@ import org.example.ecommerce.domain.Orders;
 import org.example.ecommerce.register.OrdersRegister;
 import org.example.ecommerce.repository.OrdersRepository;
 import org.springframework.stereotype.Service;
+
 @Service
 @Transactional
 @RequiredArgsConstructor
 public class OrdersService {//주문
     private final OrdersRepository ordersRepository;
+
     public Orders makeOrders(OrdersRegister ordersRegister) {
         if(ordersRepository.existsByOrdersName(ordersRegister.getOrdersName())){
             throw new DuplicateNameException("주문 이름 이미 있음");}
